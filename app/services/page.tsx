@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import ServiceCard from "@/components/ServiceCard";
 import CTABanner from "@/components/CTABanner";
 
 const services = [
