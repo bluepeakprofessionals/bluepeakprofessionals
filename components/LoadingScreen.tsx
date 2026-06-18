@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function LoadingScreen() {
   const [phase, setPhase] = useState<"enter" | "hold" | "wipe" | "done">("enter");
