@@ -9,13 +9,13 @@ import CTABanner from "@/components/CTABanner";
 
 const services = [
   { icon: "🌊", title: "Weekly Maintenance" },
-  { icon: "⚗️", title: "Chemical Balancing" },
+  { icon: "🧪", title: "Chemical Balancing" },
   { icon: "🔧", title: "Equipment Repair" },
   { icon: "🟢", title: "Algae Treatment" },
   { icon: "❄️", title: "Pool Opening/Closing" },
   { icon: "🔩", title: "Filter Cleaning" },
   { icon: "🛡️", title: "Kid Proofing" },
-  { icon: "💦", title: "Pressure Washing" },
+  { icon: "💧", title: "Pressure Washing" },
 ];
 
 const whyItems = [
