@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { DM_Sans, Oswald } from "next/font/google";
 import "./globals.css";
+import dynamic from "next/dynamic";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import LoadingScreen from "@/components/LoadingScreen";
+
+const LoadingScreen = dynamic(() => import("@/components/LoadingScreen"), { ssr: false });
 
 const oswald = Oswald({
   subsets: ["latin"],
@@ -30,7 +32,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${dmSans.variable} ${oswald.variable} font-dm antialiased bg-bg text-dark-blue`}>
+      <body className={`${dmSans.variable} ${oswald.variable} font-dm antialiased bg-bg text-dark-blue`} suppressHydrationWarning>
         <LoadingScreen />
         <Navbar />
         <main>{children}</main>

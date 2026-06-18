@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 60 },
@@ -14,6 +15,9 @@ const fadeUp = {
 };
 
 export default function HeroSection() {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
 
@@ -103,7 +107,7 @@ export default function HeroSection() {
         <motion.p
           custom={0}
           variants={fadeUp}
-          initial="hidden"
+          initial={mounted ? "hidden" : false}
           animate="visible"
           className="text-xs font-black uppercase tracking-[0.3em] text-cyan-200 mb-8"
         >
@@ -114,7 +118,7 @@ export default function HeroSection() {
           <motion.h1
             custom={1}
             variants={fadeUp}
-            initial="hidden"
+            initial={mounted ? "hidden" : false}
             animate="visible"
             className="font-oswald font-bold uppercase leading-none text-white"
             style={{ fontSize: "clamp(72px, 11vw, 128px)", letterSpacing: "-0.02em" }}
@@ -126,7 +130,7 @@ export default function HeroSection() {
           <motion.span
             custom={2}
             variants={fadeUp}
-            initial="hidden"
+            initial={mounted ? "hidden" : false}
             animate="visible"
             className="block font-oswald font-bold uppercase leading-none text-white"
             style={{
