@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 60 },
@@ -15,19 +16,43 @@ const fadeUp = {
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Pool water gradient background */}
+
+      {/* ── Layer 1: pool.jpg background photo ── */}
+      <div className="absolute inset-0">
+        <Image
+          src="/pool.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+          aria-hidden="true"
+        />
+      </div>
+
+      {/* ── Layer 2: dark-blue colour wash — tints photo to brand palette ── */}
       <div
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse at 60% 40%, #7dd8f0 0%, #29a8d4 30%, #0e7fb5 60%, #095f8a 100%)",
+            "linear-gradient(135deg, rgba(10,30,77,0.82) 0%, rgba(21,65,140,0.70) 40%, rgba(30,98,201,0.55) 100%)",
         }}
         aria-hidden="true"
       />
 
-      {/* Caustic light shimmer — SVG filter-based ripple pattern */}
+      {/* ── Layer 3: radial highlight — bright aqua centre, dark edges ── */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(ellipse at 65% 45%, rgba(79,163,247,0.25) 0%, transparent 70%)",
+        }}
+        aria-hidden="true"
+      />
+
+      {/* ── Layer 4: caustic shimmer + animated ripple rings ── */}
       <svg
-        className="absolute inset-0 w-full h-full pointer-events-none select-none opacity-30"
+        className="absolute inset-0 w-full h-full pointer-events-none select-none opacity-25"
         xmlns="http://www.w3.org/2000/svg"
         aria-hidden="true"
       >
@@ -56,25 +81,12 @@ export default function HeroSection() {
             <stop offset="100%" stopColor="#0e7fb5" stopOpacity="0" />
           </radialGradient>
         </defs>
-        {/* Caustic ripple overlay */}
         <rect width="100%" height="100%" fill="url(#shimmerGrad)" filter="url(#caustic)" />
-        {/* Surface wave lines */}
-        <ellipse cx="50%" cy="38%" rx="55%" ry="4%" fill="white" opacity="0.06" />
-        <ellipse cx="48%" cy="52%" rx="45%" ry="3%" fill="white" opacity="0.05" />
-        <ellipse cx="52%" cy="65%" rx="50%" ry="3.5%" fill="white" opacity="0.04" />
-        <ellipse cx="46%" cy="76%" rx="40%" ry="2.5%" fill="white" opacity="0.04" />
-        {/* Light rays from surface */}
-        <line x1="30%" y1="0" x2="15%" y2="100%" stroke="white" strokeWidth="60" opacity="0.04" />
-        <line x1="55%" y1="0" x2="45%" y2="100%" stroke="white" strokeWidth="90" opacity="0.03" />
-        <line x1="75%" y1="0" x2="85%" y2="100%" stroke="white" strokeWidth="50" opacity="0.035" />
-        <line x1="90%" y1="0" x2="100%" y2="80%" stroke="white" strokeWidth="40" opacity="0.025" />
-        {/* Bright shimmer spots */}
-        <ellipse cx="62%" cy="22%" rx="6%" ry="3%" fill="white" opacity="0.18" />
-        <ellipse cx="38%" cy="35%" rx="4%" ry="2%" fill="white" opacity="0.12" />
-        <ellipse cx="72%" cy="48%" rx="3%" ry="1.5%" fill="white" opacity="0.1" />
-        <ellipse cx="25%" cy="60%" rx="5%" ry="2%" fill="white" opacity="0.08" />
+        <ellipse cx="50%" cy="38%" rx="55%" ry="4%" fill="white" opacity="0.05" />
+        <ellipse cx="48%" cy="52%" rx="45%" ry="3%" fill="white" opacity="0.04" />
+        <ellipse cx="52%" cy="65%" rx="50%" ry="3.5%" fill="white" opacity="0.03" />
 
-        {/* Animated ripple rings — center of pool */}
+        {/* Animated ripple rings */}
         <circle cx="62%" cy="45%" r="0" fill="none" stroke="white" strokeWidth="1.5"
           className="ripple-ring" style={{ animationDelay: "0s" }} />
         <circle cx="62%" cy="45%" r="0" fill="none" stroke="white" strokeWidth="1.2"
@@ -83,32 +95,28 @@ export default function HeroSection() {
           className="ripple-ring" style={{ animationDelay: "2s" }} />
         <circle cx="62%" cy="45%" r="0" fill="none" stroke="white" strokeWidth="0.8"
           className="ripple-ring" style={{ animationDelay: "3s" }} />
-
-        {/* Secondary ripple source — upper left */}
         <circle cx="28%" cy="30%" r="0" fill="none" stroke="white" strokeWidth="1"
           className="ripple-ring-sm" style={{ animationDelay: "0.5s" }} />
         <circle cx="28%" cy="30%" r="0" fill="none" stroke="white" strokeWidth="0.8"
           className="ripple-ring-sm" style={{ animationDelay: "2s" }} />
-
-        {/* Tertiary ripple — lower right */}
         <circle cx="80%" cy="70%" r="0" fill="none" stroke="white" strokeWidth="0.9"
           className="ripple-ring-sm" style={{ animationDelay: "1.5s" }} />
         <circle cx="80%" cy="70%" r="0" fill="none" stroke="white" strokeWidth="0.7"
           className="ripple-ring-sm" style={{ animationDelay: "3s" }} />
       </svg>
 
-      {/* Dark vignette on left so text stays readable */}
+      {/* ── Layer 5: left vignette — keeps text crisp ── */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "linear-gradient(to right, rgba(6,40,80,0.55) 0%, rgba(6,40,80,0.25) 50%, transparent 100%)",
+            "linear-gradient(to right, rgba(10,30,77,0.60) 0%, rgba(10,30,77,0.30) 50%, transparent 100%)",
         }}
         aria-hidden="true"
       />
 
+      {/* ── Layer 6: hero content ── */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 pt-32 pb-20">
-        {/* Eyebrow label */}
         <motion.p
           custom={0}
           variants={fadeUp}
@@ -119,7 +127,6 @@ export default function HeroSection() {
           Premium Pool Care
         </motion.p>
 
-        {/* Giant headline */}
         <div className="overflow-hidden">
           <motion.h1
             custom={1}
