@@ -86,23 +86,6 @@ export default function HeroSection() {
         <ellipse cx="48%" cy="52%" rx="45%" ry="3%" fill="white" opacity="0.04" />
         <ellipse cx="52%" cy="65%" rx="50%" ry="3.5%" fill="white" opacity="0.03" />
 
-        {/* Animated ripple rings */}
-        <circle cx="62%" cy="45%" r="0" fill="none" stroke="white" strokeWidth="1.5"
-          className="ripple-ring" style={{ animationDelay: "0s" }} />
-        <circle cx="62%" cy="45%" r="0" fill="none" stroke="white" strokeWidth="1.2"
-          className="ripple-ring" style={{ animationDelay: "1s" }} />
-        <circle cx="62%" cy="45%" r="0" fill="none" stroke="white" strokeWidth="1"
-          className="ripple-ring" style={{ animationDelay: "2s" }} />
-        <circle cx="62%" cy="45%" r="0" fill="none" stroke="white" strokeWidth="0.8"
-          className="ripple-ring" style={{ animationDelay: "3s" }} />
-        <circle cx="28%" cy="30%" r="0" fill="none" stroke="white" strokeWidth="1"
-          className="ripple-ring-sm" style={{ animationDelay: "0.5s" }} />
-        <circle cx="28%" cy="30%" r="0" fill="none" stroke="white" strokeWidth="0.8"
-          className="ripple-ring-sm" style={{ animationDelay: "2s" }} />
-        <circle cx="80%" cy="70%" r="0" fill="none" stroke="white" strokeWidth="0.9"
-          className="ripple-ring-sm" style={{ animationDelay: "1.5s" }} />
-        <circle cx="80%" cy="70%" r="0" fill="none" stroke="white" strokeWidth="0.7"
-          className="ripple-ring-sm" style={{ animationDelay: "3s" }} />
       </svg>
 
       {/* ── Layer 5: left vignette — keeps text crisp ── */}
@@ -133,7 +116,7 @@ export default function HeroSection() {
             variants={fadeUp}
             initial="hidden"
             animate="visible"
-            className="font-black uppercase leading-none text-white"
+            className="font-oswald font-bold uppercase leading-none text-white"
             style={{ fontSize: "clamp(72px, 11vw, 128px)", letterSpacing: "-0.02em" }}
           >
             BLUE
@@ -145,12 +128,10 @@ export default function HeroSection() {
             variants={fadeUp}
             initial="hidden"
             animate="visible"
-            className="block font-black uppercase leading-none"
+            className="block font-oswald font-bold uppercase leading-none text-white"
             style={{
               fontSize: "clamp(72px, 11vw, 128px)",
               letterSpacing: "-0.02em",
-              WebkitTextStroke: "3px rgba(255,255,255,0.85)",
-              color: "transparent",
             }}
           >
             PEAK.

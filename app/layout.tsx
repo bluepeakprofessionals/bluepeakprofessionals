@@ -1,13 +1,21 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { DM_Sans, Oswald } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import LoadingScreen from "@/components/LoadingScreen";
 
-const poppins = Poppins({
+const oswald = Oswald({
+  subsets: ["latin"],
+  weight: ["700"],
+  variable: "--font-oswald",
+  display: "swap",
+});
+
+const dmSans = DM_Sans({
   subsets: ["latin"],
   weight: ["400", "700", "900"],
-  variable: "--font-poppins",
+  variable: "--font-dm-sans",
   display: "swap",
 });
 
@@ -22,7 +30,8 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} font-poppins antialiased bg-bg text-dark-blue`}>
+      <body className={`${dmSans.variable} ${oswald.variable} font-dm antialiased bg-bg text-dark-blue`}>
+        <LoadingScreen />
         <Navbar />
         <main>{children}</main>
         <Footer />

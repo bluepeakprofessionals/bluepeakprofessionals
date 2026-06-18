@@ -21,37 +21,6 @@
   }
 }
 
-@keyframes ripple {
-  0% {
-    r: 0;
-    opacity: 0.5;
-  }
-  100% {
-    r: 340;
-    opacity: 0;
-  }
-}
-
-@keyframes ripple-sm {
-  0% {
-    r: 0;
-    opacity: 0.4;
-  }
-  100% {
-    r: 200;
-    opacity: 0;
-  }
-}
-
-.ripple-ring {
-  animation: ripple 4s ease-out infinite;
-  transform-origin: center;
-}
-
-.ripple-ring-sm {
-  animation: ripple-sm 3.2s ease-out infinite;
-  transform-origin: center;
-}
 
 @layer utilities {
   .text-stroke-accent {

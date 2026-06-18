@@ -17,7 +17,8 @@ const config: Config = {
         bg: "#F4F8FE",
       },
       fontFamily: {
-        poppins: ["var(--font-poppins)", "sans-serif"],
+        dm: ["var(--font-dm-sans)", "sans-serif"],
+        oswald: ["var(--font-oswald)", "sans-serif"],
       },
     },
   },

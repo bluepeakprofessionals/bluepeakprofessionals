@@ -3,6 +3,8 @@ import Link from "next/link";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
+  { href: "/blog", label: "Blog" },
+  { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -13,9 +15,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
           {/* Logo on white card */}
           <div>
-            <div className="bg-white rounded-lg p-3 inline-block mb-4">
+            <div className="inline-block mb-4">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logo.png" alt="Blue Peak Pool Care" height={44} className="h-11 w-auto" />
+              <img src="/logo.png" alt="Blue Peak Pool Care" height={44} className="h-11 w-auto" style={{ filter: "brightness(0) saturate(100%) invert(63%) sepia(60%) saturate(500%) hue-rotate(185deg) brightness(105%)" }} />
             </div>
             <p className="text-light-blue/70 text-sm leading-relaxed max-w-xs">
               Premium pool care for discerning homeowners. Crystal-clear results, every visit.

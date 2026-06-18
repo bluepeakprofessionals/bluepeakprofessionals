@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const serviceOptions = [
   "Weekly Maintenance",
@@ -44,17 +45,15 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-dark-blue min-h-[40vh] flex items-end pb-16 px-6 pt-40 relative overflow-hidden">
-        <svg
-          className="absolute right-0 top-0 h-full w-1/2 pointer-events-none opacity-20"
-          viewBox="0 0 500 600"
-          fill="none"
-          aria-hidden="true"
-          preserveAspectRatio="xMaxYMid slice"
-        >
-          <path d="M250 600L500 100L500 600Z" fill="#4FA3F7" />
-          <path d="M100 600L450 0L500 200L500 600Z" fill="#1E62C9" />
-        </svg>
+      <section className="min-h-[40vh] flex items-end pb-16 px-6 pt-40 relative overflow-hidden">
+        {/* pool.jpg background */}
+        <div className="absolute inset-0">
+          <Image src="/pool.jpg" alt="" fill priority sizes="100vw" className="object-cover object-center" aria-hidden="true" />
+        </div>
+        {/* dark-blue colour wash — matches homepage hero treatment */}
+        <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(10,30,77,0.82) 0%, rgba(21,65,140,0.70) 40%, rgba(30,98,201,0.55) 100%)" }} aria-hidden="true" />
+        {/* left vignette for text legibility */}
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(10,30,77,0.60) 0%, rgba(10,30,77,0.30) 50%, transparent 100%)" }} aria-hidden="true" />
         <div className="max-w-7xl mx-auto relative z-10">
           <motion.p
             initial={{ opacity: 0, y: 20 }}

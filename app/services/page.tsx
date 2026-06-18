@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import CTABanner from "@/components/CTABanner";
 
 const services = [
@@ -12,7 +13,7 @@ const services = [
       "Consistent, reliable weekly visits to skim, vacuum, brush, and test your water. We handle every detail so your pool is always swim-ready.",
   },
   {
-    icon: "⚗️",
+    icon: "🧪",
     title: "Chemical Balancing",
     description:
       "Precise water chemistry testing and adjustment. We balance pH, alkalinity, chlorine, and more to keep your water safe and sparkling.",
@@ -48,7 +49,7 @@ const services = [
       "Extra layers of protection for peace of mind around unsupervised children. We install and inspect pool safety fences, locking gate latches, surface alarms, and anti-entrapment drain covers to meet the highest safety standards.",
   },
   {
-    icon: "💦",
+    icon: "💧",
     title: "Pressure Washing",
     description:
       "High-pressure washing of pool decks, coping, tile lines, and surrounding hardscapes. We blast away algae, mineral deposits, staining, and grime to restore your pool area to a clean, like-new finish.",
@@ -59,17 +60,12 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-dark-blue min-h-[50vh] flex items-end pb-20 px-6 pt-40 relative overflow-hidden">
-        <svg
-          className="absolute right-0 top-0 h-full w-1/2 pointer-events-none opacity-20"
-          viewBox="0 0 500 600"
-          fill="none"
-          aria-hidden="true"
-          preserveAspectRatio="xMaxYMid slice"
-        >
-          <path d="M250 600L500 100L500 600Z" fill="#4FA3F7" />
-          <path d="M100 600L450 0L500 200L500 600Z" fill="#1E62C9" />
-        </svg>
+      <section className="min-h-[50vh] flex items-end pb-20 px-6 pt-40 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <Image src="/pool.jpg" alt="" fill priority sizes="100vw" className="object-cover object-center" aria-hidden="true" />
+        </div>
+        <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(10,30,77,0.82) 0%, rgba(21,65,140,0.70) 40%, rgba(30,98,201,0.55) 100%)" }} aria-hidden="true" />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(10,30,77,0.60) 0%, rgba(10,30,77,0.30) 50%, transparent 100%)" }} aria-hidden="true" />
         <div className="max-w-7xl mx-auto relative z-10">
           <motion.p
             initial={{ opacity: 0, y: 20 }}

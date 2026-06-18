@@ -8,6 +8,8 @@ import { motion, AnimatePresence } from "framer-motion";
 const links = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
+  { href: "/blog", label: "Blog" },
+  { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -33,10 +35,10 @@ export default function Navbar() {
       >
         <nav className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-16 md:h-20">
           <Link href="/" className="flex items-center gap-2">
-            <div className={`${scrolled ? "bg-white rounded-lg p-2" : ""} transition-all duration-300`}>
+            <div>
               {/* logo.png — plain img avoids next/image setState-during-render in dev mode */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logo.png" alt="Blue Peak Pool Care" height={40} className="h-10 w-auto" />
+              <img src="/logo.png" alt="Blue Peak Pool Care" height={40} className="h-10 w-auto" style={{ filter: "brightness(0) saturate(100%) invert(63%) sepia(60%) saturate(500%) hue-rotate(185deg) brightness(105%)" }} />
             </div>
           </Link>
 
@@ -105,9 +107,9 @@ export default function Navbar() {
             transition={{ type: "tween", duration: 0.3 }}
             className="fixed inset-0 z-40 bg-dark-blue flex flex-col items-center justify-center gap-10 md:hidden"
           >
-            <div className="bg-white rounded-lg p-3 mb-4">
+            <div className="mb-4">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logo.png" alt="Blue Peak Pool Care" height={40} className="h-10 w-auto" />
+              <img src="/logo.png" alt="Blue Peak Pool Care" height={40} className="h-10 w-auto" style={{ filter: "brightness(0) saturate(100%) invert(63%) sepia(60%) saturate(500%) hue-rotate(185deg) brightness(105%)" }} />
             </div>
             {links.map((l) => (
               <Link
