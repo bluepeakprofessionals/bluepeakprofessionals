@@ -73,6 +73,28 @@ export default function HeroSection() {
         <ellipse cx="38%" cy="35%" rx="4%" ry="2%" fill="white" opacity="0.12" />
         <ellipse cx="72%" cy="48%" rx="3%" ry="1.5%" fill="white" opacity="0.1" />
         <ellipse cx="25%" cy="60%" rx="5%" ry="2%" fill="white" opacity="0.08" />
+
+        {/* Animated ripple rings — center of pool */}
+        <circle cx="62%" cy="45%" r="0" fill="none" stroke="white" strokeWidth="1.5"
+          className="ripple-ring" style={{ animationDelay: "0s" }} />
+        <circle cx="62%" cy="45%" r="0" fill="none" stroke="white" strokeWidth="1.2"
+          className="ripple-ring" style={{ animationDelay: "1s" }} />
+        <circle cx="62%" cy="45%" r="0" fill="none" stroke="white" strokeWidth="1"
+          className="ripple-ring" style={{ animationDelay: "2s" }} />
+        <circle cx="62%" cy="45%" r="0" fill="none" stroke="white" strokeWidth="0.8"
+          className="ripple-ring" style={{ animationDelay: "3s" }} />
+
+        {/* Secondary ripple source — upper left */}
+        <circle cx="28%" cy="30%" r="0" fill="none" stroke="white" strokeWidth="1"
+          className="ripple-ring-sm" style={{ animationDelay: "0.5s" }} />
+        <circle cx="28%" cy="30%" r="0" fill="none" stroke="white" strokeWidth="0.8"
+          className="ripple-ring-sm" style={{ animationDelay: "2s" }} />
+
+        {/* Tertiary ripple — lower right */}
+        <circle cx="80%" cy="70%" r="0" fill="none" stroke="white" strokeWidth="0.9"
+          className="ripple-ring-sm" style={{ animationDelay: "1.5s" }} />
+        <circle cx="80%" cy="70%" r="0" fill="none" stroke="white" strokeWidth="0.7"
+          className="ripple-ring-sm" style={{ animationDelay: "3s" }} />
       </svg>
 
       {/* Dark vignette on left so text stays readable */}
