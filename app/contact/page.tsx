@@ -97,7 +97,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <p className="font-black text-dark-blue text-sm uppercase tracking-wide mb-1">Phone</p>
-                  <p className="text-mid-blue/80 text-sm">(888) 814-2819</p>
+                  <p className="text-mid-blue/80 text-sm">(817) 328-8354</p>
                 </div>
               </div>
 

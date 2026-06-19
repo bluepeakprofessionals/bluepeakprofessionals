@@ -15,7 +15,7 @@ const faqs = [
       },
       {
         q: "How do I get started with Blue Peak Pool Care?",
-        a: "Just reach out through our contact page or call us at (888) 814-2819. We'll ask a few quick questions about your pool, walk you through our service options, and get you scheduled — usually within the same week.",
+        a: "Just reach out through our contact page or call us at (817) 328-8354. We'll ask a few quick questions about your pool, walk you through our service options, and get you scheduled — usually within the same week.",
       },
       {
         q: "Do you offer one-time services or only recurring plans?",
