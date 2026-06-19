@@ -25,6 +25,10 @@ export const metadata: Metadata = {
   title: "Blue Peak Pool Care | Premium Pool Maintenance",
   description:
     "Crystal-clear pools, every time. Blue Peak Pool Care provides premium pool maintenance, chemical balancing, equipment repair, and more.",
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({
