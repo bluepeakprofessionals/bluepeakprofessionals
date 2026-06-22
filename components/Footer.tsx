@@ -45,7 +45,7 @@ export default function Footer() {
           <div className="md:text-right">
             <p className="text-xs font-black uppercase tracking-widest text-light-blue mb-5">Get In Touch</p>
             <address className="not-italic space-y-2 text-sm text-white/70">
-              <p>(817) 328-8354</p>
+              <p>(866) 686-6817</p>
               <p>bluepeakprofessionals@gmail.com</p>
               <p>Serving Ellis County and DFW metroplex</p>
             </address>
