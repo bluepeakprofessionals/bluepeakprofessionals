@@ -38,7 +38,7 @@ export default function Navbar() {
             <div>
               {/* logo.png — plain img avoids next/image setState-during-render in dev mode */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logo.png" alt="Blue Peak Pool Care" height={40} className="h-10 w-auto" style={{ filter: "brightness(0) saturate(100%) invert(63%) sepia(60%) saturate(500%) hue-rotate(185deg) brightness(105%)" }} />
+              <img src="/newlogo.png" alt="Blue Peak Pool Care" height={40} className="h-10 w-auto" />
             </div>
           </Link>
 
@@ -109,7 +109,7 @@ export default function Navbar() {
           >
             <div className="mb-4">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logo.png" alt="Blue Peak Pool Care" height={40} className="h-10 w-auto" style={{ filter: "brightness(0) saturate(100%) invert(63%) sepia(60%) saturate(500%) hue-rotate(185deg) brightness(105%)" }} />
+              <img src="/newlogo.png" alt="Blue Peak Pool Care" height={40} className="h-10 w-auto" />
             </div>
             {links.map((l) => (
               <Link

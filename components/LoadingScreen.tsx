@@ -83,10 +83,9 @@ export default function LoadingScreen() {
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/logo.png"
+            src="/newlogo.png"
             alt="Blue Peak Pool Care"
             className="h-28 w-auto"
-            style={{ filter: "brightness(0) saturate(100%) invert(63%) sepia(60%) saturate(500%) hue-rotate(185deg) brightness(105%)" }}
           />
 
           {/* Water drops falling from logo */}
