@@ -17,7 +17,7 @@ export default function Footer() {
           <div>
             <div className="inline-block mb-4">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/newlogo.png" alt="Blue Peak Pool Care" height={44} className="h-11 w-auto" />
+              <img src="/transparentlogo.png" alt="Blue Peak Pool Care" height={44} className="h-11 w-auto" />
             </div>
             <p className="text-light-blue/70 text-sm leading-relaxed max-w-xs">
               Premium pool care for discerning homeowners. Crystal-clear results, every visit.
