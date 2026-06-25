@@ -83,7 +83,7 @@ export default function LoadingScreen() {
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/logo.png"
+            src="/newlogo.png"
             alt="Blue Peak Pool Care"
             className="h-28 w-auto"
           />
