@@ -147,7 +147,7 @@ export default function HomePage() {
               <CountUp end="50+" label="Pools Maintained" />
               <CountUp end="2+" label="Years of Service" />
               <CountUp end="99%" label="Client Satisfaction" />
-              <CountUp end="4.9★" label="Avg. Rating" />
+              <CountUp end="5.0★" label="Avg. Rating" />
             </div>
           </div>
           <div>
